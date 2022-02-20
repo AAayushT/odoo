@@ -69,9 +69,10 @@ addons_path = /opt/odoo14/odoo/addons,/opt/odoo14/odoo-custom-addons
 =====================================================================
 
 open system unit file
-$ sudo nano /etc/systemd/system/odoo14.service
+$ sudo nano /etc/systemd/system/odoo14.servic
 
-==========================================/etc/systemd/system/odoo14.service==========================================
+=========================/etc/systemd/system/odoo14.service=============================
+
 [Unit]
 Description=Odoo14
 Requires=postgresql.service
@@ -89,7 +90,7 @@ StandardOutput=journal+console
 [Install]
 WantedBy=multi-user.target
 
-======================================================================================================================
+=========================================================================================
 
 Time to tell system that you have done some mischieve(heheheheheh!!!!)
 $ sudo systemctl daemon-reload
