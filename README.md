@@ -54,7 +54,9 @@ $ exit
 
 IT'S TIME FOR CONFIGURING
 $ sudo nano /etc/odoo14.conf
+
 ==========================/etc/odoo14.conf===========================
+
 [options]
 ; This is the password that allows database operations:
 admin_passwd = my_admin_passwd
@@ -63,10 +65,12 @@ db_port = False
 db_user = odoo14
 db_password = False
 addons_path = /opt/odoo14/odoo/addons,/opt/odoo14/odoo-custom-addons
+
 =====================================================================
 
 open system unit file
 $ sudo nano /etc/systemd/system/odoo14.service
+
 ==========================================/etc/systemd/system/odoo14.service==========================================
 [Unit]
 Description=Odoo14
@@ -84,6 +88,7 @@ StandardOutput=journal+console
 
 [Install]
 WantedBy=multi-user.target
+
 ======================================================================================================================
 
 Time to tell system that you have done some mischieve(heheheheheh!!!!)
