@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="student_template_search" model="ir.ui.view">
+            <field name="name">student.search</field>
+            <field name="model">student</field>
+            <field name="arch" type="xml">
+                <search string="Student">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="roll_number"/>
+                    <field name="dob"/>
+                    <field name="age"/>
+                    <field name="doj"/>
+                    <field name="year"/>
+                    <field name="batch"/>
+                </search>
+            </field>
+        </record>
+
+	<record id="student_template_tree" model="ir.ui.view">
+            <field name="name">student.tree</field>
+            <field name="model">student</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id" string="uniqueID"/>
+                    <field name="name" string="Name"/>
+                    <field name="roll_number" string="Roll No."/>
+                    <field name="dob" string="Date of birth"/>
+                    <field name="age" string="Age"/>
+                    <field name="doj" string="Date of joining"/>
+                    <field name="year" string="Year"/>
+                    <field name="batch" string="Batch"/>
+                </tree>
+            </field>
+        </record>
+
+	<record id="student_template_form" model="ir.ui.view">
+            <field name="name">student.form</field>
+            <field name="model">student</field>
+            <field name="arch" type="xml">
+                <form>
+                <sheet>
+                <group>
+                <group>
+                    <field name="id" string="uniqueID"/>
+                    <field name="name" string="Name"/>
+                </group>
+                <group>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                </group>
+                </group>
+                <group>
+                    <field name="roll_number" string="Roll No."/>
+                </group>
+                <group>
+                <group>
+                    <field name="dob" string="Date of birth"/>
+                </group>
+                <group>
+                    <field name="age" string="Age"/>
+                </group>
+                </group>
+                <group>
+                <group>
+                    <field name="doj" string="Date of joining"/>
+                </group>
+                <group>
+                    <field name="year" string="Year"/>
+                </group>
+                </group>
+                <group>
+                    <field name="batch" string="Batch"/>
+                </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="teacher_template_search" model="ir.ui.view">
+            <field name="name">teacher.search</field>
+            <field name="model">teacher</field>
+            <field name="arch" type="xml">
+                <search string="teacher">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="subject_list"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="teacher_template_tree" model="ir.ui.view">
+            <field name="name">teacher.tree</field>
+            <field name="model">teacher</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id" string="uniqueID"/>
+                    <field name="name" string="Name"/>
+                    <field name="employee_id" string="Employee-ID"/>
+                    <field name="subject_list" string="Subjects taken"/>
+                </tree>
+            </field>
+        </record>
+
+	<record id="teacher_template_form" model="ir.ui.view">
+            <field name="name">teacher.form</field>
+            <field name="model">teacher</field>
+            <field name="arch" type="xml">
+                <form>
+                <sheet>
+                <group>
+                <group>
+                    <field name="id" string="uniqueID"/>
+                </group>
+                <group>
+                    <field name="name" string="Name"/>
+                </group>
+                </group>
+                <group>
+                <group>
+                    <field name="employee_id" string="Employee-ID"/>
+                </group>
+                <group>
+                    <field name="subject_list" string="Subjects taken"/>
+                </group>
+                </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="subject_template_search" model="ir.ui.view">
+            <field name="name">subject.search</field>
+            <field name="model">subject</field>
+            <field name="arch" type="xml">
+                <search string="Subject">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="branch_id"/>
+                    <field name="teacher_id"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="subject_template_tree" model="ir.ui.view">
+            <field name="name">subject.tree</field>
+            <field name="model">subject</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id" string="Subject Code"/>
+                    <field name="name" string="Subject Name"/>
+                    <field name="branch_id" string="Branch-ID"/>
+                    <field name="teacher_id" string="Teacher-uID"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="subject_template_form" model="ir.ui.view">
+            <field name="name">subject.form</field>
+            <field name="model">subject</field>
+            <field name="arch" type="xml">
+                <form>
+                <sheet>
+                <group>
+                <group>
+                    <field name="id" string="Subject Code"/>
+                </group>
+                <group>
+                    <field name="name" string="Subject Name"/>
+                </group>
+                </group>
+                <group>
+                <group>
+                    <field name="branch_id" string="Branch-ID"/>
+                </group>
+                <group>
+                    <field name="teacher_id" string="Teacher-uID"/>
+                </group>
+                </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="branch_template_search" model="ir.ui.view">
+            <field name="name">branch.search</field>
+            <field name="model">branch</field>
+            <field name="arch" type="xml">
+                <search string="Branch">
+                    <field name="id"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="branch_template_tree" model="ir.ui.view">
+            <field name="name">branch.tree</field>
+            <field name="model">branch</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id" string="Branch Code"/>
+                    <field name="name" string="Branch Name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="branch_template_form" model="ir.ui.view">
+            <field name="name">branch.form</field>
+            <field name="model">branch</field>
+            <field name="arch" type="xml">
+                <form>
+                <sheet>
+                <group>
+                    <field name="id" string="Branch Code"/>
+                </group>
+                <group>
+                    <field name="name" string="Branch Name"/>
+                </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="batch_template_search" model="ir.ui.view">
+            <field name="name">batch.search</field>
+            <field name="model">batch</field>
+            <field name="arch" type="xml">
+                <search string="batch">
+                <field name="id"/>
+                <field name="duration"/>
+                <field name="branch_id"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="batch_template_tree" model="ir.ui.view">
+            <field name="name">batch.tree</field>
+            <field name="model">batch</field>
+            <field name="arch" type="xml">
+                <tree>
+                <field name="id" string="Batch Code"/>
+                <field name="duration" string="Batch Duration"/>
+                <field name="branch_id" string="Branch-ID"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="batch_template_form" model="ir.ui.view">
+            <field name="name">batch.form</field>
+            <field name="model">batch</field>
+            <field name="arch" type="xml">
+                <form>
+                <sheet>
+                <group>
+                <group>
+                    <field name="id" string="Batch Code"/>
+                </group>
+                <group>
+                    <field name="duration" string="Batch Duration"/>
+                </group>
+                </group>
+                <group>
+                    <field name="branch_id" string="Branch-ID"/>
+                </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="teacher_template_action" model="ir.actions.act_window">
+            <field name="name">Teachers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">teacher</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Details of the teachers working in institute
+                </p>
+            </field>
+        </record>
+        
+        <record id="subject_template_action" model="ir.actions.act_window">
+            <field name="name">Subjects</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">subject</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Subjects taken by Teachers and available in various branches
+                </p>
+            </field>
+        </record>
+	
+	<record id="branch_template_action" model="ir.actions.act_window">
+            <field name="name">Branches</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">branch</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Different branches can be viewed and can be added here that are thought to students in Institute
+                </p>
+            </field>
+        </record>
+        
+        <record id="batch_template_action" model="ir.actions.act_window">
+            <field name="name">Batches</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">batch</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Have information about the various batches and the courses for those particular batch
+                </p>
+            </field>
+        </record>
+        
+        <record id="student_template_action" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">student</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Student information like Name enroll.no. can be added here also you can view the details of students you have added here
+                </p>
+            </field>
+        </record>
+	
+	<menuitem id="studentportal_root"
+            name="StudentPortal"
+            sequence="10"/>
+            
+        <menuitem id="student_sub"
+            name="Students"
+            parent="studentportal_root"
+            sequence="10"/>
+           
+	<menuitem id="student"
+            name="Details"
+            parent="student_sub"
+            action="student_template_action"
+            sequence="10"/>
+            
+        <menuitem id="branch_sub"
+      	    name="Branches"
+      	    parent="studentportal_root"
+      	    sequence="11"/>
+      	
+      	<menuitem id="branch"
+      	    name="Available"
+      	    parent="branch_sub"
+      	    action = "branch_template_action"
+      	    sequence="10"/>
+      	    
+      	<menuitem id="batch_sub"
+      	    name="Batches"
+      	    parent="studentportal_root"
+      	    sequence="12"/>
+      	
+      	<menuitem id="batch"
+      	    name="Batches"
+      	    parent="batch_sub"
+      	    action = "batch_template_action"
+      	    sequence="10"/>
+      	    
+      	<menuitem id="subject_sub"
+      	    name="Subjects"
+      	    parent="studentportal_root"
+      	    sequence="13"/>
+      	
+      	<menuitem id="subject"
+      	    name="Available"
+      	    parent="subject_sub"
+      	    action = "subject_template_action"
+      	    sequence="10"/>
+      	    
+      	<menuitem id="teacher_sub"
+      	    name="Teachers"
+      	    parent="studentportal_root"
+      	    sequence="14"/>
+      	
+      	<menuitem id="teacher"
+      	    name="Details"
+      	    parent="teacher_sub"
+      	    action = "teacher_template_action"
+      	    sequence="10"/>
+      	    
+</odoo>
+
